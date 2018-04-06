@@ -1,0 +1,20 @@
+﻿@model MVCAud1.Models.Client
+@{
+    ViewBag.Title = "ShowClient";
+}
+
+<h2>ShowClient</h2>
+
+@if (Model.age < 18)
+{
+    <h1 class="warning">Ви треба надзор од родител</h1>
+}
+else
+{
+    <h2>@Model.name</h2>
+    <h3>Возраст: @Model.age</h3>
+    <h3>Adresa: @Model.address</h3>
+    <h3>Телефон: @Model.telephone</h3>
+    <h3>Членска карта: @Model.movieCard</h3>
+}
+

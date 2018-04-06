@@ -1,0 +1,9 @@
+C:\Users\Marko\source\repos\itKol1Zadaca2\itKol1Zadaca2\bin\itKol1Zadaca2.dll.config
+C:\Users\Marko\source\repos\itKol1Zadaca2\itKol1Zadaca2\bin\itKol1Zadaca2.dll
+C:\Users\Marko\source\repos\itKol1Zadaca2\itKol1Zadaca2\bin\itKol1Zadaca2.pdb
+C:\Users\Marko\source\repos\itKol1Zadaca2\itKol1Zadaca2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Marko\source\repos\itKol1Zadaca2\itKol1Zadaca2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Marko\source\repos\itKol1Zadaca2\itKol1Zadaca2\obj\Debug\itKol1Zadaca2.csprojResolveAssemblyReference.cache
+C:\Users\Marko\source\repos\itKol1Zadaca2\itKol1Zadaca2\obj\Debug\itKol1Zadaca2.csproj.CoreCompileInputs.cache
+C:\Users\Marko\source\repos\itKol1Zadaca2\itKol1Zadaca2\obj\Debug\itKol1Zadaca2.dll
+C:\Users\Marko\source\repos\itKol1Zadaca2\itKol1Zadaca2\obj\Debug\itKol1Zadaca2.pdb

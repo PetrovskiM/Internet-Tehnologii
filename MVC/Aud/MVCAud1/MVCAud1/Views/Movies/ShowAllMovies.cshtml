@@ -1,0 +1,20 @@
+﻿@model List<MVCAud1.Models.Movie>
+@{
+    ViewBag.Title = "ShowAllMovies";
+}
+
+<h3>Movies:</h3>
+<ul>
+    @{
+        int i = 0;
+        foreach (var movie in Model)
+        {
+            <li>
+                @Html.ActionLink(movie.name, "ShowMovie", new { idONE = i})
+                @Html.ActionLink("Edit", "EditMovie", new { idONE = i})
+                @Html.ActionLink("Delete", "DeleteMovie", new { idONE = i})
+            </li>
+            i++;
+        }
+    }
+</ul>

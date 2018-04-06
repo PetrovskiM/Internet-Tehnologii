@@ -1,0 +1,8 @@
+C:\Users\Marko\source\repos\Lab1_2\Lab1_2\bin\Lab1_2.dll.config
+C:\Users\Marko\source\repos\Lab1_2\Lab1_2\bin\Lab1_2.dll
+C:\Users\Marko\source\repos\Lab1_2\Lab1_2\bin\Lab1_2.pdb
+C:\Users\Marko\source\repos\Lab1_2\Lab1_2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Marko\source\repos\Lab1_2\Lab1_2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Marko\source\repos\Lab1_2\Lab1_2\obj\Debug\Lab1_2.csproj.CoreCompileInputs.cache
+C:\Users\Marko\source\repos\Lab1_2\Lab1_2\obj\Debug\Lab1_2.dll
+C:\Users\Marko\source\repos\Lab1_2\Lab1_2\obj\Debug\Lab1_2.pdb

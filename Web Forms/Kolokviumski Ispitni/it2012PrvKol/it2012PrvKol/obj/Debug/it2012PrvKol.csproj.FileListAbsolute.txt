@@ -1,0 +1,9 @@
+C:\Users\Marko\source\repos\it2012PrvKol\it2012PrvKol\bin\it2012PrvKol.dll.config
+C:\Users\Marko\source\repos\it2012PrvKol\it2012PrvKol\bin\it2012PrvKol.dll
+C:\Users\Marko\source\repos\it2012PrvKol\it2012PrvKol\bin\it2012PrvKol.pdb
+C:\Users\Marko\source\repos\it2012PrvKol\it2012PrvKol\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Marko\source\repos\it2012PrvKol\it2012PrvKol\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Marko\source\repos\it2012PrvKol\it2012PrvKol\obj\Debug\it2012PrvKol.csprojResolveAssemblyReference.cache
+C:\Users\Marko\source\repos\it2012PrvKol\it2012PrvKol\obj\Debug\it2012PrvKol.csproj.CoreCompileInputs.cache
+C:\Users\Marko\source\repos\it2012PrvKol\it2012PrvKol\obj\Debug\it2012PrvKol.dll
+C:\Users\Marko\source\repos\it2012PrvKol\it2012PrvKol\obj\Debug\it2012PrvKol.pdb

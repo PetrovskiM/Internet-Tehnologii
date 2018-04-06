@@ -1,0 +1,37 @@
+﻿@model List<ItLab3.Models.Friend>
+@{
+    ViewBag.Title = "ShowAllFriends";
+}
+
+<h2>ShowAllFriends</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Friend ID.</th>
+        <th>Friend Name</th>
+        <th>Place</th>
+        <th></th>
+    </tr>
+    @{
+        int i = 0;
+        foreach (var f in Model)
+        {
+            <tr>
+                <td>
+                    @f.Id
+                </td>
+                <td>
+                    @f.Ime
+                </td>
+                <td>
+                    @f.MestoZiveenje
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "UpdateFriend", new { IdInList = i }, new { @class = "btn btn-primary"})
+                    @Html.ActionLink("Delete", "DeleteFriend", new { IdInList = i }, new { @class = "btn btn-primary"})
+                </td>
+            </tr>
+            i++;
+        }
+    }
+</table>

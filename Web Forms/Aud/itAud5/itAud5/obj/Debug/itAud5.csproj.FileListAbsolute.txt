@@ -1,0 +1,9 @@
+C:\Users\Marko\source\repos\itAud5\itAud5\bin\itAud5.dll.config
+C:\Users\Marko\source\repos\itAud5\itAud5\bin\itAud5.dll
+C:\Users\Marko\source\repos\itAud5\itAud5\bin\itAud5.pdb
+C:\Users\Marko\source\repos\itAud5\itAud5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Marko\source\repos\itAud5\itAud5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Marko\source\repos\itAud5\itAud5\obj\Debug\itAud5.csprojResolveAssemblyReference.cache
+C:\Users\Marko\source\repos\itAud5\itAud5\obj\Debug\itAud5.csproj.CoreCompileInputs.cache
+C:\Users\Marko\source\repos\itAud5\itAud5\obj\Debug\itAud5.dll
+C:\Users\Marko\source\repos\itAud5\itAud5\obj\Debug\itAud5.pdb

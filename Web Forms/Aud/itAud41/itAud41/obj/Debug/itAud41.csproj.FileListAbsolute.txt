@@ -1,0 +1,9 @@
+C:\Users\Marko\source\repos\itAud41\itAud41\bin\itAud41.dll.config
+C:\Users\Marko\source\repos\itAud41\itAud41\bin\itAud41.dll
+C:\Users\Marko\source\repos\itAud41\itAud41\bin\itAud41.pdb
+C:\Users\Marko\source\repos\itAud41\itAud41\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Marko\source\repos\itAud41\itAud41\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Marko\source\repos\itAud41\itAud41\obj\Debug\itAud41.csprojResolveAssemblyReference.cache
+C:\Users\Marko\source\repos\itAud41\itAud41\obj\Debug\itAud41.csproj.CoreCompileInputs.cache
+C:\Users\Marko\source\repos\itAud41\itAud41\obj\Debug\itAud41.dll
+C:\Users\Marko\source\repos\itAud41\itAud41\obj\Debug\itAud41.pdb
