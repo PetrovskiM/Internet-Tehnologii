@@ -1,37 +1,69 @@
-﻿@model List<ItLab3.Models.Friend>
+﻿@model IEnumerable<ItLab3.Models.Friend>
 @{
     ViewBag.Title = "ShowAllFriends";
 }
 
-<h2>ShowAllFriends</h2>
 
-<table class="table table-bordered">
-    <tr>
-        <th>Friend ID.</th>
-        <th>Friend Name</th>
-        <th>Place</th>
-        <th></th>
-    </tr>
-    @{
-        int i = 0;
-        foreach (var f in Model)
-        {
+<h2>ShowAllFriends</h2>
+    <table id="friends" class="table table-bordered">
+        <thead>
             <tr>
-                <td>
-                    @f.Id
-                </td>
-                <td>
-                    @f.Ime
-                </td>
-                <td>
-                    @f.MestoZiveenje
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "UpdateFriend", new { IdInList = i }, new { @class = "btn btn-primary"})
-                    @Html.ActionLink("Delete", "DeleteFriend", new { IdInList = i }, new { @class = "btn btn-primary"})
-                </td>
+                <th>@Html.DisplayNameFor(model => model.FriendNum)</th>
+                <th>@Html.DisplayNameFor(model => model.Ime)</th>
+                <th>@Html.DisplayNameFor(model => model.MestoZiveenje)</th>
+                <th></th>
             </tr>
-            i++;
-        }
-    }
-</table>
+        </thead>
+        <tbody>
+            @{
+                int i = 1;
+                foreach (var f in Model)
+                {
+                    <tr>
+                        <td>
+                            @f.FriendNum
+                        </td>
+                        <td>
+                            @f.Ime
+                        </td>
+                        <td>
+                            @f.MestoZiveenje
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "UpdateFriend", new { IdInList = f.Id }, new { @class = "btn btn-primary" })
+                            <button class="btn btn-primary delete" data-friend-id="@f.Id">Delete</button>
+                        </td>
+                    </tr>
+                    i++;
+                }
+            }
+        </tbody>
+    </table>
+
+@section Scripts{
+    <script>
+        $(document).on("ready",
+            function () {
+                var table = $("#friends").DataTable();
+            });
+
+        $(document).ready(function () {
+            var table = $("#friends").DataTable();
+            $("#friends .delete").on("click", function () {
+                var button = $(this);
+                bootbox.confirm("Do you want to delete this movie?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/FriendsApi/" + button.attr("data-friend-id"),
+                            method: "DELETE",
+                            success: function () {
+                                table.row(button.parents("tr")).remove().draw();
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+}
+

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -10,11 +11,12 @@ namespace ItLab3.Controllers
     public class FriendController : Controller
     {
 
-        static List<Friend> friendsList = new List<Friend>()
+        FriendsDbContext db;
+
+        public FriendController()
         {
-            new Friend(){ Id = 1, Ime="Okram", MestoZiveenje="Sup"},
-            new Friend(){ Id = 2, Ime="Vkram", MestoZiveenje="Vup"},
-        };
+            db = new FriendsDbContext();
+        }
 
         // GET: Friend
         public ActionResult Index()
@@ -24,7 +26,7 @@ namespace ItLab3.Controllers
 
         public ActionResult ShowAllFriends()
         {
-            return View(friendsList);
+            return View(db.Friends.ToList());
         }
 
         public ActionResult AddFriend()
@@ -40,14 +42,15 @@ namespace ItLab3.Controllers
             {
                 return View("AddFriend", model);
             }
-            friendsList.Add(model);
-            return View("ShowAllFriends", friendsList);
+            db.Friends.Add(model);
+            db.SaveChanges();
+            return RedirectToAction("ShowAllFriends");
         }
 
         public ActionResult UpdateFriend(int IdInList)
         {
-            Friend model = friendsList.ElementAt(IdInList);
-            model.IdInList = IdInList;
+            Friend model = db.Friends.FirstOrDefault(f => f.Id == IdInList);
+            model.Id = IdInList;
             return View(model);
         }
 
@@ -58,17 +61,42 @@ namespace ItLab3.Controllers
             {
                 return View("UpdateFriend", model);
             }
-            Friend toUpdate = friendsList.ElementAt(model.IdInList);
-            toUpdate.Id = model.Id;
+            var i = model.Id;
+            Friend toUpdate = db.Friends.FirstOrDefault(f => f.Id == model.Id);
+            toUpdate.FriendNum = model.FriendNum;
             toUpdate.Ime = model.Ime;
             toUpdate.MestoZiveenje = model.MestoZiveenje;
-            return View("ShowAllFriends", friendsList);
+            db.SaveChanges();
+            return View("ShowAllFriends", db.Friends.ToList());
         }
 
-        public ActionResult DeleteFriend(int IdInList)
+        public ActionResult DeleteFriend(int? IdInList)
         {
-            friendsList.RemoveAt(IdInList);
-            return View("ShowAllFriends", friendsList);
+            if (IdInList == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Friend f = db.Friends.Find(IdInList);
+            if (f == null)
+            {
+                return HttpNotFound();
+            }
+            return View(f);
+        }
+
+        [HttpPost, ActionName("DeleteFriend")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Friend f = db.Friends.Find(id);
+            db.Friends.Remove(f);
+            db.SaveChanges();
+            return RedirectToAction("ShowAllFriends");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
         }
     }
 }

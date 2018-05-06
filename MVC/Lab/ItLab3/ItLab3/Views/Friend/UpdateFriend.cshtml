@@ -8,9 +8,9 @@
 @using (Html.BeginForm("UpdateFriend", "Friend"))
 {
     <div class="form-group">
-        @Html.LabelFor(m => m.Id)
-        @Html.TextBoxFor(m => m.Id, new { @class = "form-control", type = "number" })
-        @Html.ValidationMessageFor(m => m.Id)
+        @Html.LabelFor(m => m.FriendNum)
+        @Html.TextBoxFor(m => m.FriendNum, new { @class = "form-control", type = "number" })
+        @Html.ValidationMessageFor(m => m.FriendNum)
     </div>
 
     //Moram ova da go imam, inace koga ke se povika UpdateFriend go zema tocniot elemnt od lista
@@ -18,8 +18,8 @@
     //Ako se stavat breakpoints na 49 i 61 vo FriendController i se poglednat vrednostite za IdInList
     //Prviot pat e korektno, vo POST metodot e 0 t.e greskata, a so sledniov div raboti kako sto treba
     <div class="form-group " style="display: none">
-        @Html.LabelFor(m => m.IdInList)
-        @Html.TextBoxFor(m => m.IdInList, new { @class = "form-control", type = "number" })
+        @Html.LabelFor(m => m.Id)
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control", type = "number" })
     </div>
 
     <div class="form-group">

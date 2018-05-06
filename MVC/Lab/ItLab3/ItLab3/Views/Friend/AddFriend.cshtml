@@ -8,9 +8,9 @@
 @using (Html.BeginForm("InsertNewFriend", "Friend"))
 {
     <div class="form-group">
-        @Html.LabelFor(m => m.Id)
-        @Html.TextBoxFor(m => m.Id, new { @class = "form-control", type = "number" })
-        @Html.ValidationMessageFor(m => m.Id)
+        @Html.LabelFor(m => m.FriendNum)
+        @Html.TextBoxFor(m => m.FriendNum, new { @class = "form-control", type = "number" })
+        @Html.ValidationMessageFor(m => m.FriendNum)
     </div>
 
     <div class="form-group">

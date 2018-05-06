@@ -11,5 +11,7 @@ namespace MVCAud1.Models
         public string name { get; set; }
         public float rating { get; set; }
         public string downloadUrl { get; set; }
+        public string ImgUrl { get; set; }
+        //public virtual List<Client> Clients { get; set; }
     }
 }
